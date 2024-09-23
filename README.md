@@ -1,1 +1,1 @@
-# advance-C-C-algorithm
+# advance-C/C++-algorithm
