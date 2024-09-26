@@ -1,11 +1,11 @@
  # calloc()
 Trong C, hàm calloc() được sử dụng để cấp phát bộ nhớ động cho một mảng và khởi tạo tất cả các phần tử của nó về giá trị 0. Cú pháp của calloc()
 **cú pháp** 
-#void* calloc(size_t num, size_t size);#
+#void* calloc(size_t num, size_t size);
+
 **ví dụ** 
 #include <stdio.h>
 #include <stdlib.h>
-
 int main() {
     int n = 5;
     
@@ -27,6 +27,7 @@ int main() {
     
     return 0;
 }
+
 **Tác dụng:**
 Cấp phát bộ nhớ: calloc() sẽ cấp phát một khối bộ nhớ có kích thước bằng num * size byte.
 Khởi tạo giá trị 0: Không giống như malloc(), calloc() sẽ khởi tạo toàn bộ khối bộ nhớ vừa cấp phát về giá trị 0. Điều này có ích khi muốn 
@@ -45,10 +46,10 @@ Khởi tạo giá trị 0: Không giống như malloc(), calloc() sẽ khởi t�
  Hàm realloc() trong C được sử dụng để thay đổi kích thước của bộ nhớ đã cấp phát trước đó bằng malloc(), calloc(), hoặc realloc()
  **cú pháp**
  void* realloc(void* ptr, size_t new_size);
+ 
  **ví dụ**
  #include <stdio.h>
 #include <stdlib.h>
-
 int main() {
     int *arr;
     int n = 5;
@@ -101,6 +102,7 @@ int main() {
 Mở rộng: Nếu kích thước mới lớn hơn, realloc() sẽ cấp phát thêm bộ nhớ và giữ nguyên dữ liệu cũ.
 Thu nhỏ: Nếu kích thước mới nhỏ hơn, dữ liệu ngoài phạm vi kích thước mới sẽ bị cắt bỏ.Nếu không có đủ bộ nhớ để mở rộng, realloc() trả về con trỏ NULL,
 và bộ nhớ ban đầu vẫn không bị thay đổi.
+
 **So sánh malloc(), calloc(), và realloc():**
 | Hàm |                       Tác dụng                 | Khởi tạo giá trị ban đầu |           Khi nào dùng           |
 |--------------------------------------                |-------                   |                    ------        |
@@ -112,10 +114,10 @@ và bộ nhớ ban đầu vẫn không bị thay đổi.
 Hàm free() trong C được sử dụng để giải phóng bộ nhớ đã được cấp phát trước đó bởi các hàm như malloc(), calloc(), hoặc realloc()
 **cú pháp**
 void free(void* ptr);
+
 **ví dụ**
 #include <stdio.h>
 #include <stdlib.h>
-
 int main() {
     int *arr;
     int n = 5;
@@ -147,6 +149,7 @@ int main() {
 
     return 0;
 }
+
 **tác dụng**
 Giải phóng vùng nhớ được cấp phát trước đó. Sau khi gọi free(), vùng nhớ đó sẽ trở thành không hợp lệ và không thể truy cập được nữa. không sử dụng 
 con trỏ trỏ đến vùng nhớ này sau khi đã gọi free().
