@@ -6,7 +6,9 @@ Trong C, hàm calloc() được sử dụng để cấp phát bộ nhớ động
 **ví dụ** 
 
 #include <stdio.h>
+
 #include <stdlib.h>
+
 int main() {
     int n = 5;
     
@@ -51,7 +53,9 @@ Khởi tạo giá trị 0: Không giống như malloc(), calloc() sẽ khởi t�
  **ví dụ**
  
 #include <stdio.h>
+
 #include <stdlib.h>
+
 int main() {
     int *arr;
     int n = 5;
