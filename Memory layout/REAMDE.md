@@ -4,6 +4,7 @@ Trong C, hàm calloc() được sử dụng để cấp phát bộ nhớ động
 #void* calloc(size_t num, size_t size);
 
 **ví dụ** 
+
 #include <stdio.h>
 #include <stdlib.h>
 int main() {
@@ -48,7 +49,8 @@ Khởi tạo giá trị 0: Không giống như malloc(), calloc() sẽ khởi t�
  void* realloc(void* ptr, size_t new_size);
  
  **ví dụ**
- #include <stdio.h>
+ 
+#include <stdio.h>
 #include <stdlib.h>
 int main() {
     int *arr;
@@ -104,8 +106,9 @@ Thu nhỏ: Nếu kích thước mới nhỏ hơn, dữ liệu ngoài phạm vi k
 và bộ nhớ ban đầu vẫn không bị thay đổi.
 
 **So sánh malloc(), calloc(), và realloc():**
-| Hàm |                       Tác dụng                 | Khởi tạo giá trị ban đầu |           Khi nào dùng           |
-|--------------------------------------                |-------                   |                    ------        |
+
+| Hàm | Tác dụng |Khởi tạo giá trị ban đầu| Khi nào dùng |
+|--------------                                        |-------                   |------                            |-------|
 | malloc()| Cấp phát bộ nhớ mới với kích thước cố định |          Không           | Khi cần cấp phát bộ nhớ mới      | 
 | calloc() |Cấp phát bộ nhớ mới và khởi tạo về 0       |           Có             | Khi cần cấp phát và khởi tạo giá trị| 
 |realloc() | Thay đổi kích thước vùng nhớ đã cấp phát  | Không (giữ nguyên dữ liệu cũ) | Khi cần thay đổi kích thước vùng nhớ ban đầu| 
@@ -116,6 +119,7 @@ Hàm free() trong C được sử dụng để giải phóng bộ nhớ đã đ�
 void free(void* ptr);
 
 **ví dụ**
+
 #include <stdio.h>
 #include <stdlib.h>
 int main() {
