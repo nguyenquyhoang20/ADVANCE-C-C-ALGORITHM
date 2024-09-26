@@ -4,9 +4,8 @@ Trong C, hàm calloc() được sử dụng để cấp phát bộ nhớ động
 #void* calloc(size_t num, size_t size);
 
 **ví dụ** 
-
+'''c
 #include <stdio.h>
-
 #include <stdlib.h>
 
 int main() {
@@ -51,9 +50,8 @@ Khởi tạo giá trị 0: Không giống như malloc(), calloc() sẽ khởi t�
  void* realloc(void* ptr, size_t new_size);
  
  **ví dụ**
- 
+ '''c
 #include <stdio.h>
-
 #include <stdlib.h>
 
 int main() {
@@ -123,39 +121,40 @@ Hàm free() trong C được sử dụng để giải phóng bộ nhớ đã đ�
 void free(void* ptr);
 
 **ví dụ**
+'''c
+#include <stdio.h>  
+#include <stdlib.h>  
 
-#include <stdio.h>
-#include <stdlib.h>
-int main() {
-    int *arr;
-    int n = 5;
+int main() {  
+    int *arr;  
+    int n = 5;  
 
-    // Cấp phát bộ nhớ cho mảng 5 phần tử
-    arr = (int*) malloc(n * sizeof(int));
+    // Cấp phát bộ nhớ cho mảng 5 phần tử  
+    arr = (int*) malloc(n * sizeof(int));  
 
-    if (arr == NULL) {
-        printf("Lỗi cấp phát bộ nhớ!\n");
-        return 1;
-    }
+    if (arr == NULL) {  
+        printf("Lỗi cấp phát bộ nhớ!\n");  
+        return 1;  
+    }  
 
-    // Khởi tạo giá trị cho mảng
-    for (int i = 0; i < n; i++) {
-        arr[i] = i + 1;
-    }
+    // Khởi tạo giá trị cho mảng  
+    for (int i = 0; i < n; i++) {  
+        arr[i] = i + 1;  
+    }  
 
-    // In giá trị của mảng
-    printf("Mảng: ");
-    for (int i = 0; i < n; i++) {
-        printf("%d ", arr[i]);
-    }
+    // In giá trị của mảng  
+    printf("Mảng: ");  
+    for (int i = 0; i < n; i++) {  
+        printf("%d ", arr[i]);  
+    }  
 
-    // Giải phóng bộ nhớ sau khi sử dụng
-    free(arr);
+    // Giải phóng bộ nhớ sau khi sử dụng  
+    free(arr);  
 
-    // Sau khi giải phóng, không nên sử dụng lại con trỏ arr
-    // printf("%d", arr[0]); // Truy cập sau khi free có thể gây ra lỗi
+    // Sau khi giải phóng, không nên sử dụng lại con trỏ arr  
+    // printf("%d", arr[0]); // Truy cập sau khi free có thể gây ra lỗi  
 
-    return 0;
+    return 0;  
 }
 
 **tác dụng**
