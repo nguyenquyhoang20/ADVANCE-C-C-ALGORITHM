@@ -1,4 +1,5 @@
 # advance-C/C++-algorithm
+# Pointer
 1.void pointer
 ví dụ
 
