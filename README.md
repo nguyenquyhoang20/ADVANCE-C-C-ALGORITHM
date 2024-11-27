@@ -4,9 +4,11 @@
 Khái niệm và các loại Pointer
 	Trong ngôn ngữ lập trình C, con trỏ (pointer) là một biến chứa địa chỉ bộ nhớ của một biến khác. Việc sử dụng con trỏ giúp chúng ta thực hiện các thao tác trên bộ nhớ một cách linh hoạt hơn. Dưới đây là một số khái niệm cơ bản về con trỏ trong C:
 	Cách khai báo:
-```int *ptr;  // con trỏ đến kiểu int
+```cpp 
+int *ptr;  // con trỏ đến kiểu int
 char *ptr_char;  // con trỏ đến kiểu char
-float *ptr_float;  // con trỏ đến kiểu float```
+float *ptr_float;  // con trỏ đến kiểu float
+```
 
 
 	Lấy địa chỉ của một biến:
