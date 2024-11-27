@@ -1,4 +1,4 @@
-# advance-C/C++-algorithm
+# ADVANCE-C-C-ALGORITHM
 # Pointer
 
 **Khái niệm và các loại Pointer**
