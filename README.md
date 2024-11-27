@@ -361,16 +361,16 @@ void display()
 ```
 
 ***Ứng dụng:**
-Chia sẻ biến và hàm giữa các file nguồn:
+-Chia sẻ biến và hàm giữa các file nguồn:
 Extern cho phép bạn chia sẻ biến và hàm giữa nhiều file nguồn trong một chương trình.
 Điều này hữu ích khi bạn muốn tách chương trình thành các phần nhỏ để quản lý dễ dàng hơn.
-Chia sẻ biến và hàm giữa các module hoặc thư viện:
+- Chia sẻ biến và hàm giữa các module hoặc thư viện:
 Extern có thể được sử dụng để kết nối các module hoặc thư viện trong một dự án lớn.
-Khai báo hàm trong trường hợp định nghĩa sau:
+- Khai báo hàm trong trường hợp định nghĩa sau:
 Nếu bạn muốn sử dụng một hàm trước khi nó được định nghĩa trong mã nguồn, bạn có thể sử dụng extern để khai báo hàm.
-Biến toàn cục giữa các tệp nguồn:
+- Biến toàn cục giữa các tệp nguồn:
 Khi có một biến toàn cục được sử dụng trong nhiều file nguồn, extern giúp các file nguồn biết về sự tồn tại của biến đó.
-Chia sẻ hằng số giữa các file nguồn:
+- Chia sẻ hằng số giữa các file nguồn:
 Nếu bạn có một hằng số được sử dụng ở nhiều nơi, bạn có thể sử dụng extern để chia sẻ giá trị của hằng số đó giữa các file nguồn.
 ## Static
 ### Static local variables
@@ -785,27 +785,27 @@ Trong ngôn ngữ lập trình C, bộ nhớ của chương trình thường đ�
 ## Text Segment
 Text Segment là một phần của bộ nhớ trong mô hình bộ nhớ của một chương trình máy tính, được sử dụng để lưu trữ mã máy của chương trình. Cụ thể, Text Segment chứa mã máy đã được biên dịch từ mã nguồn của chương trình và được CPU thực thi để thực hiện các hành động quy định trong chương trình.
 Một số đặc điểm:
-Mã máy:
-Chứa mã máy, tức là tập hợp các lệnh thực thi được CPU hiểu được.
-Mã máy được tạo ra thông qua quá trình biên dịch từ mã nguồn của chương trình.
-Quyền truy cập:
-Text Segment thường có quyền đọc và thực thi, nhưng không có quyền ghi. điều này ngăn chặn chương trình việc tự sửa đổi mã máy của nó.
-Kích thước cố định:
-Kích thước của Text Segment thường là cố định khi chương trình được biên dịch.
+- Mã máy:
+ - Chứa mã máy, tức là tập hợp các lệnh thực thi được CPU hiểu được.
+ - Mã máy được tạo ra thông qua quá trình biên dịch từ mã nguồn của chương trình.
+- Quyền truy cập:
+ - Text Segment thường có quyền đọc và thực thi, nhưng không có quyền ghi. điều này ngăn chặn chương trình việc tự sửa đổi mã máy của nó.
+- Kích thước cố định:
+ - Kích thước của Text Segment thường là cố định khi chương trình được biên dịch.
 Điều này giúp hệ điều hành và CPU dễ dàng quản lý vùng nhớ này.
-Lưu Trữ Code và Hằng Số:
-Bao gồm cả mã máy của các hàm và các hằng số.
-Các hàm được gọi từ các phần khác của chương trình sẽ có địa chỉ trong Text Segment.
+- Lưu Trữ Code và Hằng Số:
+ - Bao gồm cả mã máy của các hàm và các hằng số.
+ - Các hàm được gọi từ các phần khác của chương trình sẽ có địa chỉ trong Text Segment.
 
 ## Data Segment
 Data Segment là một phần của bộ nhớ trong mô hình bộ nhớ của một chương trình máy tính, được sử dụng để lưu trữ dữ liệu tĩnh của chương trình. Dữ liệu tĩnh bao gồm biến toàn cục và biến tĩnh (static), tức là các biến mà không phụ thuộc vào thời gian chạy của chương trình. 
-	Một số đặc điểm:
-Biến Toàn Cục (Global Variables):
-Chứa giá trị của các biến toàn cục được khai báo trong chương trình.
-Các biến này có thể được truy cập từ bất kỳ hàm nào trong chương trình.
-Biến Tĩnh (Static Variables):
-Chứa giá trị của các biến tĩnh, nghĩa là biến được khai báo với từ khóa static.
-Có thể được truy cập chỉ trong phạm vi của hàm mà chúng được khai báo.
+-Một số đặc điểm:
+    - Biến Toàn Cục (Global Variables):
+	- Chứa giá trị của các biến toàn cục được khai báo trong chương trình.
+ 	- Các biến này có thể được truy cập từ bất kỳ hàm nào trong chương trình.
+     - Biến Tĩnh (Static Variables):
+	- Chứa giá trị của các biến tĩnh, nghĩa là biến được khai báo với từ khóa static.
+        - Có thể được truy cập chỉ trong phạm vi của hàm mà chúng được khai báo.
 Initialized Data Segment (Dữ liệu Đã Khởi Tạo):
 Chứa giá trị của các biến toàn cục và biến tĩnh được khởi tạo với giá trị ban đầu.
 Dữ liệu này được sao chép từ bộ nhớ của chương trình thực thi.
